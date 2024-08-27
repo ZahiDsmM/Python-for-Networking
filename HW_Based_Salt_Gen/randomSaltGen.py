@@ -10,7 +10,7 @@ def generateSalt(size):
      Returns:
          the number of bytes from /dev/urandom
      """
-     try:
+     try:            # or /dev/random
           with open('/dev/urandom', 'rb') as file:
                return file.read(size)
      except Exception as e:
